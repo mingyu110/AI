@@ -1,0 +1,1147 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: advanced-chat
+  name: 智能零代码业务决策助手
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/deepseek:0.0.5@fd6efd37c2a931911de8ab9ca3ba2da303bef146d45ee87ad896b04b36d09403
+kind: app
+version: 0.1.5
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: llm-source-1744093343133-target
+      selected: false
+      source: llm
+      sourceHandle: source
+      target: '1744093343133'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: 1744093343133-source-1744092755727-target
+      selected: false
+      source: '1744093343133'
+      sourceHandle: source
+      target: '1744092755727'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: code
+      id: 1744092593369--1744105440621-target
+      selected: false
+      source: '1744092593369'
+      sourceHandle: source
+      target: '1744105440621'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 1744105440621-source-llm-target
+      selected: false
+      source: '1744105440621'
+      sourceHandle: source
+      target: llm
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: if-else
+      id: 1744092755727-true-1744109366433-target
+      selected: false
+      source: '1744092755727'
+      sourceHandle: 'true'
+      target: '1744109366433'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1744109366433-true-1744108961109-target
+      selected: false
+      source: '1744109366433'
+      sourceHandle: 'true'
+      target: '1744108961109'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: answer
+      id: 1744092755727-false-1744112762620-target
+      selected: false
+      source: '1744092755727'
+      sourceHandle: 'false'
+      target: '1744112762620'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1744109366433-false-1744111524718-target
+      selected: false
+      source: '1744109366433'
+      sourceHandle: 'false'
+      target: '1744111524718'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1744111524718-source-1744169859162-target
+      source: '1744111524718'
+      sourceHandle: source
+      target: '1744169859162'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: 1744169859162-source-1744179403837-target
+      source: '1744169859162'
+      sourceHandle: source
+      target: '1744179403837'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 1744179403837-source-1744101488302-target
+      source: '1744179403837'
+      sourceHandle: source
+      target: '1744101488302'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1744101488302-source-1744184379625-target
+      source: '1744101488302'
+      sourceHandle: source
+      target: '1744184379625'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1744108961109-source-1744111524718-target
+      source: '1744108961109'
+      sourceHandle: source
+      target: '1744111524718'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: 流程开始节点，读取DATABASE_SCHEMA和QUERY_HISTORY变量。
+        selected: false
+        title: 开始
+        type: start
+        variables: []
+      height: 114
+      id: '1744092593369'
+      position:
+        x: 30
+        y: 285
+      positionAbsolute:
+        x: 30
+        y: 285
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: 使用大模型分析用户问题
+        memory:
+          query_prompt_template: '{{#sys.query#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 10
+        model:
+          completion_params: {}
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - edition_type: jinja2
+          id: a533191d-16aa-4b7b-8d1a-840ad538a656
+          jinja2_text: "请分析用户问题，判断以下内容：\n\n1. 是否需要执行SQL查询\n判断标准：\n- 涉及用户/客户群体筛选时必须为true\n\
+            - 涉及数据统计、分析时必须为true\n- 涉及条件筛选时必须为true\n- 即使需要澄清具体标准，只要涉及数据查询也必须为true\n\
+            \n2. 问题是否包含模糊表述需要澄清\n3. 涉及哪些业务场景\n\n{% if database_schema is defined %}\n\
+            【数据库结构】\n{{database_schema}}\n{% endif %}\n\n{% if terminology_mapping\
+            \ is defined %}\n【术语映射】\n{{terminology_mapping}}\n{% endif %}\n\n【用户问题】\n\
+            {{input}}\n\n【SQL查询判断示例】\n- \"给高价值用户发促销信息\" -> needs_sql = true（需要查询筛选用户）\n\
+            - \"查询近三个月的销售数据\" -> needs_sql = true（需要查询销售数据）\n- \"分析客户购买趋势\" -> needs_sql\
+            \ = true（需要查询客户行为数据）\n- \"发送新品推广消息\" -> needs_sql = true（需要确定发送目标用户）\n\
+            \n必须以下面的JSON格式返回结果：\n{\n  \"needs_sql\": true或false,\n  \"needs_clarification\"\
+            : true或false,\n  \"business_scenario\": \"客户分层\"或\"营销活动\"或\"其他\",\n  \"\
+            unclear_terms\": [\"最近\", \"消费高的\"],\n  \"reason\": \"解释分析结果\"\n}\n\n\
+            注意：\n1. 涉及用户筛选的问题必须设置needs_sql为true\n2. 涉及数据分析的问题必须设置needs_sql为true\n\
+            3. 即使需要澄清具体标准，也不影响needs_sql的判断\n4. 你的回复必须是有效的JSON格式，不要有任何前缀或后缀文本"
+          role: system
+          text: "请分析用户问题，判断是否需要执行SQL查询来回答数据库相关问题。\n必须以下面的JSON格式返回结果：\n{\n  \"needs_sql\"\
+            : true或false,\n  \"reason\": \"简短解释为什么需要或不需要SQL查询\"\n}\n注意：你的回复必须是有效的JSON格式，不要有任何前缀或后缀文本。"
+        selected: false
+        title: 分析问题
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 118
+      id: llm
+      position:
+        x: 638
+        y: 285
+      positionAbsolute:
+        x: 638
+        y: 285
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: '='
+            id: e2e7f1b4-54f0-4967-ad28-d560ae9cdbea
+            numberVarType: constant
+            value: '1'
+            varType: number
+            variable_selector:
+            - '1744093343133'
+            - needs_sql
+          id: 'true'
+          logical_operator: and
+        desc: 根据needs_sql判断是否需要执行SQL查询
+        selected: false
+        title: 条件分支
+        type: if-else
+      height: 170
+      id: '1744092755727'
+      position:
+        x: 1246
+        y: 285
+      positionAbsolute:
+        x: 1246
+        y: 285
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "def main(llm_output: str) -> dict:\n    import json\n    import re\n\
+          \    \n    # 处理LLM输出(原代码基础上扩展)\n    text = llm_output.strip()\n    text\
+          \ = re.sub(r'```json|```', '', text)\n    json_match = re.search(r'({[\\\
+          s\\S]*?})', text)\n    if json_match:\n        text = json_match.group(1)\n\
+          \    \n    try:\n        parsed_json = json.loads(text)\n        needs_sql\
+          \ = parsed_json.get(\"needs_sql\", False)\n        needs_clarification =\
+          \ parsed_json.get(\"needs_clarification\", False)\n        business_scenario\
+          \ = parsed_json.get(\"business_scenario\", \"其他\")\n        unclear_terms\
+          \ = parsed_json.get(\"unclear_terms\", [])\n        reason = parsed_json.get(\"\
+          reason\", \"未提供理由\")\n    except Exception as e:\n        needs_sql = False\n\
+          \        needs_clarification = False\n        business_scenario = \"其他\"\
+          \n        unclear_terms = []\n        reason = f\"无法解析JSON: {str(e)}\"\n\
+          \        parsed_json = {\"needs_sql\": needs_sql, \"reason\": reason}\n\
+          \    \n    return {\n    \"parsed_data\": parsed_json,\n    \"needs_sql\"\
+          : 1 if needs_sql else 0,  # 修改为数值而不是字符串\n    \"needs_clarification\": 1\
+          \ if needs_clarification else 0,\n    \"business_scenario\": business_scenario,\n\
+          \    \"unclear_terms\": unclear_terms,\n    \"reason\": reason\n    }"
+        code_language: python3
+        desc: 将分析问题后的结果进行JSON解析，作为下游条件分支节点的判断条件输入
+        outputs:
+          business_scenario:
+            children: null
+            type: string
+          needs_clarification:
+            children: null
+            type: number
+          needs_sql:
+            children: null
+            type: number
+          parsed_data:
+            children: null
+            type: object
+          reason:
+            children: null
+            type: string
+          unclear_terms:
+            children: null
+            type: array[string]
+        selected: false
+        title: 代码执行
+        type: code
+        variables:
+        - value_selector:
+          - llm
+          - text
+          variable: llm_output
+      height: 98
+      id: '1744093343133'
+      position:
+        x: 942
+        y: 285
+      positionAbsolute:
+        x: 942
+        y: 285
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: 根据SQL的查询结果来回答用户提出的问题。
+        model:
+          completion_params: {}
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/deepseek/deepseek
+        prompt_config:
+          jinja2_variables:
+          - value_selector:
+            - '1744179403837'
+            - data_json
+            variable: data_json
+          - value_selector:
+            - '1744179403837'
+            - success
+            variable: query_success
+          - value_selector:
+            - '1744179403837'
+            - error
+            variable: error_msg
+          - value_selector:
+            - sys
+            - query
+            variable: user_query
+        prompt_template:
+        - edition_type: jinja2
+          id: f786f4eb-7062-4a63-a0b1-8c0061467fa7
+          jinja2_text: '你是一个专业的数据分析助手，负责将SQL查询结果以清晰易懂的方式呈现给用户。
+
+
+            {% if query_success == 1 %}
+
+            ## 查询成功
+
+
+            【用户原始问题】
+
+            {{user_query}}
+
+
+            【查询结果】
+
+            以下是查询结果：
+
+
+            ```json
+
+            {{data_json}}
+
+            ```
+
+
+            请根据这些JSON格式的数据，分析并回答用户问题。
+
+
+            {% else %}
+
+            ## 查询失败
+
+
+            抱歉，执行SQL查询时遇到了问题：
+
+
+            {{error_msg}}
+
+
+            可能的原因：
+
+            1. SQL语法错误
+
+            2. 引用了不存在的表或列
+
+            3. 数据库连接问题
+
+            4. 权限问题
+
+
+            请检查SQL查询语句或稍后再试。
+
+            {% endif %}
+
+
+            根据以上结果，请简明扼要地回答用户的问题。使用通俗易懂的语言解释数据，避免技术术语。如果数据显示了明显的趋势或模式，请指出。'
+          role: system
+          text: ''
+        selected: false
+        title: 结果生成
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 134
+      id: '1744101488302'
+      position:
+        x: 3070
+        y: 285
+      positionAbsolute:
+        x: 3070
+        y: 285
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "\ndef main(arg1: str, arg2: str) -> dict:\n    # 数据库结构定义\n    database_schema_str\
+          \ = \"\"\"\n    {\n        \"tables\": [\n            {\n              \
+          \  \"columns\": [\n                    {\"default_value\": \"nextval('product_categories_category_id_seq'::regclass)\"\
+          , \"name\": \"category_id\", \"nullable\": false, \"type\": \"integer\"\
+          },\n                    {\"default_value\": null, \"name\": \"name\", \"\
+          nullable\": false, \"type\": \"character varying\"},\n                 \
+          \   {\"default_value\": null, \"name\": \"description\", \"nullable\": true,\
+          \ \"type\": \"text\"},\n                    {\"default_value\": null, \"\
+          name\": \"parent_category_id\", \"nullable\": true, \"type\": \"integer\"\
+          }\n                ],\n                \"foreign_keys\": [\n           \
+          \         {\"column_name\": \"parent_category_id\", \"foreign_column\":\
+          \ \"category_id\", \"foreign_table\": \"product_categories\"}\n        \
+          \        ],\n                \"name\": \"product_categories\",\n       \
+          \         \"primary_keys\": [\"category_id\"],\n                \"row_count\"\
+          : 10\n            },\n            {\n                \"columns\": [\n  \
+          \                  {\"default_value\": \"nextval('products_product_id_seq'::regclass)\"\
+          , \"name\": \"product_id\", \"nullable\": false, \"type\": \"integer\"},\n\
+          \                    {\"default_value\": null, \"name\": \"name\", \"nullable\"\
+          : false, \"type\": \"character varying\"},\n                    {\"default_value\"\
+          : null, \"name\": \"description\", \"nullable\": true, \"type\": \"text\"\
+          },\n                    {\"default_value\": null, \"name\": \"category_id\"\
+          , \"nullable\": true, \"type\": \"integer\"},\n                    {\"default_value\"\
+          : null, \"name\": \"price\", \"nullable\": false, \"type\": \"numeric\"\
+          },\n                    {\"default_value\": null, \"name\": \"cost\", \"\
+          nullable\": true, \"type\": \"numeric\"},\n                    {\"default_value\"\
+          : \"0\", \"name\": \"stock_quantity\", \"nullable\": false, \"type\": \"\
+          integer\"},\n                    {\"default_value\": \"CURRENT_TIMESTAMP\"\
+          , \"name\": \"created_at\", \"nullable\": false, \"type\": \"timestamp without\
+          \ time zone\"},\n                    {\"default_value\": null, \"name\"\
+          : \"updated_at\", \"nullable\": true, \"type\": \"timestamp without time\
+          \ zone\"},\n                    {\"default_value\": \"true\", \"name\":\
+          \ \"is_active\", \"nullable\": true, \"type\": \"boolean\"}\n          \
+          \      ],\n                \"foreign_keys\": [\n                    {\"\
+          column_name\": \"category_id\", \"foreign_column\": \"category_id\", \"\
+          foreign_table\": \"product_categories\"}\n                ],\n         \
+          \       \"name\": \"products\",\n                \"primary_keys\": [\"product_id\"\
+          ],\n                \"row_count\": 15\n            },\n            {\n \
+          \               \"columns\": [\n                    {\"default_value\":\
+          \ \"nextval('customers_customer_id_seq'::regclass)\", \"name\": \"customer_id\"\
+          , \"nullable\": false, \"type\": \"integer\"},\n                    {\"\
+          default_value\": null, \"name\": \"first_name\", \"nullable\": false, \"\
+          type\": \"character varying\"},\n                    {\"default_value\"\
+          : null, \"name\": \"last_name\", \"nullable\": false, \"type\": \"character\
+          \ varying\"},\n                    {\"default_value\": null, \"name\": \"\
+          email\", \"nullable\": false, \"type\": \"character varying\"},\n      \
+          \              {\"default_value\": null, \"name\": \"phone\", \"nullable\"\
+          : true, \"type\": \"character varying\"},\n                    {\"default_value\"\
+          : null, \"name\": \"address\", \"nullable\": true, \"type\": \"character\
+          \ varying\"},\n                    {\"default_value\": null, \"name\": \"\
+          city\", \"nullable\": true, \"type\": \"character varying\"},\n        \
+          \            {\"default_value\": null, \"name\": \"country\", \"nullable\"\
+          : true, \"type\": \"character varying\"},\n                    {\"default_value\"\
+          : null, \"name\": \"postal_code\", \"nullable\": true, \"type\": \"character\
+          \ varying\"},\n                    {\"default_value\": \"CURRENT_DATE\"\
+          , \"name\": \"registration_date\", \"nullable\": false, \"type\": \"date\"\
+          },\n                    {\"default_value\": null, \"name\": \"last_login_date\"\
+          , \"nullable\": true, \"type\": \"timestamp without time zone\"},\n    \
+          \                {\"default_value\": \"true\", \"name\": \"is_active\",\
+          \ \"nullable\": true, \"type\": \"boolean\"}\n                ],\n     \
+          \           \"foreign_keys\": [],\n                \"name\": \"customers\"\
+          ,\n                \"primary_keys\": [\"customer_id\"],\n              \
+          \  \"row_count\": 10\n            },\n            {\n                \"\
+          columns\": [\n                    {\"default_value\": \"nextval('orders_order_id_seq'::regclass)\"\
+          , \"name\": \"order_id\", \"nullable\": false, \"type\": \"integer\"},\n\
+          \                    {\"default_value\": null, \"name\": \"customer_id\"\
+          , \"nullable\": true, \"type\": \"integer\"},\n                    {\"default_value\"\
+          : \"CURRENT_TIMESTAMP\", \"name\": \"order_date\", \"nullable\": false,\
+          \ \"type\": \"timestamp without time zone\"},\n                    {\"default_value\"\
+          : \"'pending'::character varying\", \"name\": \"status\", \"nullable\":\
+          \ false, \"type\": \"character varying\"},\n                    {\"default_value\"\
+          : null, \"name\": \"shipping_address\", \"nullable\": true, \"type\": \"\
+          character varying\"},\n                    {\"default_value\": null, \"\
+          name\": \"shipping_city\", \"nullable\": true, \"type\": \"character varying\"\
+          },\n                    {\"default_value\": null, \"name\": \"shipping_country\"\
+          , \"nullable\": true, \"type\": \"character varying\"},\n              \
+          \      {\"default_value\": null, \"name\": \"shipping_postal_code\", \"\
+          nullable\": true, \"type\": \"character varying\"},\n                  \
+          \  {\"default_value\": null, \"name\": \"shipping_method\", \"nullable\"\
+          : true, \"type\": \"character varying\"},\n                    {\"default_value\"\
+          : null, \"name\": \"payment_method\", \"nullable\": true, \"type\": \"character\
+          \ varying\"},\n                    {\"default_value\": null, \"name\": \"\
+          total_amount\", \"nullable\": false, \"type\": \"numeric\"},\n         \
+          \           {\"default_value\": \"0\", \"name\": \"discount_amount\", \"\
+          nullable\": true, \"type\": \"numeric\"},\n                    {\"default_value\"\
+          : \"0\", \"name\": \"shipping_amount\", \"nullable\": true, \"type\": \"\
+          numeric\"}\n                ],\n                \"foreign_keys\": [\n  \
+          \                  {\"column_name\": \"customer_id\", \"foreign_column\"\
+          : \"customer_id\", \"foreign_table\": \"customers\"}\n                ],\n\
+          \                \"name\": \"orders\",\n                \"primary_keys\"\
+          : [\"order_id\"],\n                \"row_count\": 15\n            },\n \
+          \           {\n                \"columns\": [\n                    {\"default_value\"\
+          : \"nextval('order_items_order_item_id_seq'::regclass)\", \"name\": \"order_item_id\"\
+          , \"nullable\": false, \"type\": \"integer\"},\n                    {\"\
+          default_value\": null, \"name\": \"order_id\", \"nullable\": true, \"type\"\
+          : \"integer\"},\n                    {\"default_value\": null, \"name\"\
+          : \"product_id\", \"nullable\": true, \"type\": \"integer\"},\n        \
+          \            {\"default_value\": null, \"name\": \"quantity\", \"nullable\"\
+          : false, \"type\": \"integer\"},\n                    {\"default_value\"\
+          : null, \"name\": \"unit_price\", \"nullable\": false, \"type\": \"numeric\"\
+          },\n                    {\"default_value\": \"0\", \"name\": \"discount_percent\"\
+          , \"nullable\": true, \"type\": \"numeric\"}\n                ],\n     \
+          \           \"foreign_keys\": [\n                    {\"column_name\": \"\
+          order_id\", \"foreign_column\": \"order_id\", \"foreign_table\": \"orders\"\
+          },\n                    {\"column_name\": \"product_id\", \"foreign_column\"\
+          : \"product_id\", \"foreign_table\": \"products\"}\n                ],\n\
+          \                \"name\": \"order_items\",\n                \"primary_keys\"\
+          : [\"order_item_id\"],\n                \"row_count\": 15\n            },\n\
+          \            {\n                \"columns\": [\n                    {\"\
+          default_value\": \"nextval('inventory_inventory_id_seq'::regclass)\", \"\
+          name\": \"inventory_id\", \"nullable\": false, \"type\": \"integer\"},\n\
+          \                    {\"default_value\": null, \"name\": \"product_id\"\
+          , \"nullable\": true, \"type\": \"integer\"},\n                    {\"default_value\"\
+          : null, \"name\": \"warehouse_id\", \"nullable\": true, \"type\": \"integer\"\
+          },\n                    {\"default_value\": \"0\", \"name\": \"quantity\"\
+          , \"nullable\": false, \"type\": \"integer\"},\n                    {\"\
+          default_value\": \"CURRENT_TIMESTAMP\", \"name\": \"last_updated\", \"nullable\"\
+          : false, \"type\": \"timestamp without time zone\"}\n                ],\n\
+          \                \"foreign_keys\": [\n                    {\"column_name\"\
+          : \"product_id\", \"foreign_column\": \"product_id\", \"foreign_table\"\
+          : \"products\"}\n                ],\n                \"name\": \"inventory\"\
+          ,\n                \"primary_keys\": [\"inventory_id\"],\n             \
+          \   \"row_count\": 15\n            },\n            {\n                \"\
+          columns\": [\n                    {\"default_value\": \"nextval('customer_behaviors_behavior_id_seq'::regclass)\"\
+          , \"name\": \"behavior_id\", \"nullable\": false, \"type\": \"integer\"\
+          },\n                    {\"default_value\": null, \"name\": \"customer_id\"\
+          , \"nullable\": true, \"type\": \"integer\"},\n                    {\"default_value\"\
+          : null, \"name\": \"event_type\", \"nullable\": false, \"type\": \"character\
+          \ varying\"},\n                    {\"default_value\": null, \"name\": \"\
+          product_id\", \"nullable\": true, \"type\": \"integer\"},\n            \
+          \        {\"default_value\": \"CURRENT_TIMESTAMP\", \"name\": \"timestamp\"\
+          , \"nullable\": false, \"type\": \"timestamp without time zone\"},\n   \
+          \                 {\"default_value\": null, \"name\": \"session_id\", \"\
+          nullable\": true, \"type\": \"character varying\"},\n                  \
+          \  {\"default_value\": null, \"name\": \"page_url\", \"nullable\": true,\
+          \ \"type\": \"character varying\"},\n                    {\"default_value\"\
+          : null, \"name\": \"device_type\", \"nullable\": true, \"type\": \"character\
+          \ varying\"},\n                    {\"default_value\": null, \"name\": \"\
+          ip_address\", \"nullable\": true, \"type\": \"character varying\"}\n   \
+          \             ],\n                \"foreign_keys\": [\n                \
+          \    {\"column_name\": \"customer_id\", \"foreign_column\": \"customer_id\"\
+          , \"foreign_table\": \"customers\"},\n                    {\"column_name\"\
+          : \"product_id\", \"foreign_column\": \"product_id\", \"foreign_table\"\
+          : \"products\"}\n                ],\n                \"name\": \"customer_behaviors\"\
+          ,\n                \"primary_keys\": [\"behavior_id\"],\n              \
+          \  \"row_count\": 22\n            },\n            {\n                \"\
+          columns\": [\n                    {\"default_value\": \"nextval('marketing_campaigns_campaign_id_seq'::regclass)\"\
+          , \"name\": \"campaign_id\", \"nullable\": false, \"type\": \"integer\"\
+          },\n                    {\"default_value\": null, \"name\": \"name\", \"\
+          nullable\": false, \"type\": \"character varying\"},\n                 \
+          \   {\"default_value\": null, \"name\": \"description\", \"nullable\": true,\
+          \ \"type\": \"text\"},\n                    {\"default_value\": null, \"\
+          name\": \"start_date\", \"nullable\": true, \"type\": \"date\"},\n     \
+          \               {\"default_value\": null, \"name\": \"end_date\", \"nullable\"\
+          : true, \"type\": \"date\"},\n                    {\"default_value\": null,\
+          \ \"name\": \"budget\", \"nullable\": true, \"type\": \"numeric\"},\n  \
+          \                  {\"default_value\": \"'planned'::character varying\"\
+          , \"name\": \"status\", \"nullable\": true, \"type\": \"character varying\"\
+          }\n                ],\n                \"foreign_keys\": [],\n         \
+          \       \"name\": \"marketing_campaigns\",\n                \"primary_keys\"\
+          : [\"campaign_id\"],\n                \"row_count\": 5\n            },\n\
+          \            {\n                \"columns\": [\n                    {\"\
+          default_value\": \"nextval('campaign_results_result_id_seq'::regclass)\"\
+          , \"name\": \"result_id\", \"nullable\": false, \"type\": \"integer\"},\n\
+          \                    {\"default_value\": null, \"name\": \"campaign_id\"\
+          , \"nullable\": true, \"type\": \"integer\"},\n                    {\"default_value\"\
+          : null, \"name\": \"date\", \"nullable\": false, \"type\": \"date\"},\n\
+          \                    {\"default_value\": \"0\", \"name\": \"impressions\"\
+          , \"nullable\": true, \"type\": \"integer\"},\n                    {\"default_value\"\
+          : \"0\", \"name\": \"clicks\", \"nullable\": true, \"type\": \"integer\"\
+          },\n                    {\"default_value\": \"0\", \"name\": \"conversions\"\
+          , \"nullable\": true, \"type\": \"integer\"},\n                    {\"default_value\"\
+          : \"0\", \"name\": \"revenue\", \"nullable\": true, \"type\": \"numeric\"\
+          },\n                    {\"default_value\": \"0\", \"name\": \"cost\", \"\
+          nullable\": true, \"type\": \"numeric\"}\n                ],\n         \
+          \       \"foreign_keys\": [\n                    {\"column_name\": \"campaign_id\"\
+          , \"foreign_column\": \"campaign_id\", \"foreign_table\": \"marketing_campaigns\"\
+          }\n                ],\n                \"name\": \"campaign_results\",\n\
+          \                \"primary_keys\": [\"result_id\"],\n                \"\
+          row_count\": 13\n            },\n            {\n                \"columns\"\
+          : [\n                    {\"default_value\": \"nextval('salespeople_salesperson_id_seq'::regclass)\"\
+          , \"name\": \"salesperson_id\", \"nullable\": false, \"type\": \"integer\"\
+          },\n                    {\"default_value\": null, \"name\": \"first_name\"\
+          , \"nullable\": false, \"type\": \"character varying\"},\n             \
+          \       {\"default_value\": null, \"name\": \"last_name\", \"nullable\"\
+          : false, \"type\": \"character varying\"},\n                    {\"default_value\"\
+          : null, \"name\": \"email\", \"nullable\": false, \"type\": \"character\
+          \ varying\"},\n                    {\"default_value\": null, \"name\": \"\
+          phone\", \"nullable\": true, \"type\": \"character varying\"},\n       \
+          \             {\"default_value\": null, \"name\": \"hire_date\", \"nullable\"\
+          : false, \"type\": \"date\"},\n                    {\"default_value\": null,\
+          \ \"name\": \"termination_date\", \"nullable\": true, \"type\": \"date\"\
+          },\n                    {\"default_value\": null, \"name\": \"manager_id\"\
+          , \"nullable\": true, \"type\": \"integer\"},\n                    {\"default_value\"\
+          : \"0\", \"name\": \"commission_rate\", \"nullable\": true, \"type\": \"\
+          numeric\"}\n                ],\n                \"foreign_keys\": [\n  \
+          \                  {\"column_name\": \"manager_id\", \"foreign_column\"\
+          : \"salesperson_id\", \"foreign_table\": \"salespeople\"}\n            \
+          \    ],\n                \"name\": \"salespeople\",\n                \"\
+          primary_keys\": [\"salesperson_id\"],\n                \"row_count\": 7\n\
+          \            }\n        ]\n    }\n    \"\"\"\n    \n    # 添加术语映射变量\n   \
+          \ terminology_mapping = \"\"\"\n    {\n      \"业务术语\": {\n        \"消费\"\
+          : [\"purchase_amount\", \"total_spent\", \"order_value\"],\n        \"高价值客户\"\
+          : [\"vip\", \"high_value_customer\", \"premium_customer\"],\n        \"\
+          促销\": [\"promotion\", \"discount\", \"campaign\"]\n      },\n      \"模糊量词\"\
+          : {\n        \"高\": \"TOP 20%\",\n        \"经常\": \"≥ 2次/月\",\n        \"\
+          最近\": \"过去3个月\"\n      }\n    }\n    \"\"\"\n\n    # 将字符串解析为Python字典对象\n\
+          \    database_schema_obj = json.loads(database_schema_str)\n\n    # 再将对象转换回JSON字符串(这样才能作为string类型输出)\n\
+          \    database_schema = json.dumps(database_schema_obj)\n    \n    # 初始化空的查询历史\n\
+          \    query_history = \"\"\n\n    # 初始化返回结果\n    result = \"\"\n    \n  \
+          \  # 返回这两个变量\n    return {\n        \"database_schema\":database_schema,\n\
+          \        \"query_history\": query_history,\n        \"terminology_mapping\"\
+          : terminology_mapping,\n        \"result\":result\n    }\n"
+        code_language: python3
+        desc: 初始化数据库结构和查询历史变量
+        outputs:
+          database_schema:
+            children: null
+            type: string
+          query_history:
+            children: null
+            type: string
+          result:
+            children: null
+            type: string
+          terminology_mapping:
+            children: null
+            type: string
+        selected: false
+        title: 初始化变量
+        type: code
+        variables:
+        - value_selector:
+          - sys
+          - query
+          variable: arg1
+        - value_selector:
+          - sys
+          - conversation_id
+          variable: arg2
+      height: 82
+      id: '1744105440621'
+      position:
+        x: 334
+        y: 285
+      positionAbsolute:
+        x: 334
+        y: 285
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: 根据用户的模糊需求进行智能分析决策，减少对用户的打扰。
+        model:
+          completion_params: {}
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/deepseek/deepseek
+        prompt_config:
+          jinja2_variables:
+          - value_selector:
+            - '1744093343133'
+            - unclear_terms
+            variable: unclear_terms
+          - value_selector:
+            - '1744093343133'
+            - business_scenario
+            variable: business_scenario
+          - value_selector:
+            - '1744105440621'
+            - terminology_mapping
+            variable: terminology_mapping
+          - value_selector:
+            - sys
+            - query
+            variable: input
+        prompt_template:
+        - edition_type: jinja2
+          id: 86870467-8caa-4401-a4a9-a07870813e5d
+          jinja2_text: "【需求分析与智能决策】\n\n用户问题: {{input}}\n\n请进行智能分析和决策：\n\n1. 判断查询需求\n\
+            - 确定是否需要SQL查询\n- 识别查询维度和条件\n- 确定数据范围\n\n2. 决策输出格式：\n{\n  \"needs_sql\"\
+            : true/false,\n  \"query_requirements\": {\n    \"dimensions\": [...],\n\
+            \    \"conditions\": [...],\n    \"time_range\": \"...\",\n    \"metrics\"\
+            : [...]\n  },\n  \"decision_details\": {\n    \"analysis_type\": \"...\"\
+            ,\n    \"chosen_criteria\": \"...\",\n    \"reasoning\": \"...\"\n  },\n\
+            \  \"expected_output\": {\n    \"format\": \"table/chart/summary\",\n\
+            \    \"key_metrics\": [...]\n  }\n}"
+          role: system
+          text: ''
+        selected: false
+        title: 需求分析决策节点
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 134
+      id: '1744108961109'
+      position:
+        x: 1854
+        y: 382
+      positionAbsolute:
+        x: 1854
+        y: 382
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: '='
+            id: 674c52f0-751e-4272-b460-f21988240e6f
+            value: '1'
+            varType: number
+            variable_selector:
+            - '1744093343133'
+            - needs_clarification
+          id: 'true'
+          logical_operator: and
+        desc: 判断是否需要进行需求分析决策流程
+        selected: false
+        title: 澄清流程判断
+        type: if-else
+      height: 154
+      id: '1744109366433'
+      position:
+        x: 1550
+        y: 285
+      positionAbsolute:
+        x: 1550
+        y: 285
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: 根据用户的精确意图判断生成SQL
+        model:
+          completion_params: {}
+          mode: chat
+          name: deepseek-coder
+          provider: langgenius/deepseek/deepseek
+        prompt_config:
+          jinja2_variables:
+          - value_selector:
+            - '1744105440621'
+            - database_schema
+            variable: database_schema
+          - value_selector:
+            - sys
+            - query
+            variable: input
+        prompt_template:
+        - edition_type: jinja2
+          id: a8346529-f48f-4523-ad42-b55b81070bd5
+          jinja2_text: '根据用户的精确意图生成符合PostgreSQL语法的SQL查询语句。
+
+
+            {% if database_schema is defined %}
+
+            【数据库结构】
+
+            {{database_schema}}
+
+            {% else %}
+
+            【数据库结构】
+
+            未找到数据库结构信息
+
+            {% endif %}
+
+
+            {% if combined_query is defined %}
+
+            【用户问题(已澄清)】
+
+            {{combined_query}}
+
+            {% else %}
+
+            【用户问题(已澄清)】
+
+            {{input}}
+
+            {% endif %}
+
+
+            {% if precise_intent is defined and precise_intent|length > 0 %}
+
+            【精确意图】
+
+            {{precise_intent}}
+
+            {% endif %}
+
+
+            {% if key_parameters is defined and key_parameters %}
+
+            【查询参数】
+
+            {% for key, value in key_parameters.items() %}
+
+            - {{key}}: {{value}}
+
+            {% endfor %}
+
+            {% endif %}
+
+
+            {% if query_history is defined and query_history|length > 0 %}
+
+            【历史查询参考】
+
+            {{query_history}}
+
+            {% endif %}
+
+
+            只返回一个完整、可执行的SQL查询语句，不需要解释。
+
+            确保查询语法正确，并且只使用数据库结构中存在的表和字段。
+
+            使用具体参数值而非占位符。
+
+
+            {% if key_parameters is defined and key_parameters.limit is defined %}
+
+            限制返回结果数量为: {{key_parameters.limit}}行
+
+            {% else %}
+
+            限制返回结果数量为: 100行
+
+            {% endif %}'
+          role: system
+          text: ''
+        selected: false
+        title: SQL生成
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 118
+      id: '1744111524718'
+      position:
+        x: 2158
+        y: 285
+      positionAbsolute:
+        x: 2158
+        y: 285
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '根据数据库结构分析，您的问题不需要执行SQL查询。
+
+
+          经分析判断，您的问题 (needs_sql = {{代码执行.needs_sql}}) 不需要查询实际数据。
+
+
+          以下是直接回答:
+
+          根据数据库结构，您询问的是关于表结构或一般性的数据库信息，我可以直接为您解答。
+
+
+          数据库中包含以下表:
+
+          - customers: 存储客户信息
+
+          - orders: 存储订单数据
+
+          - products: 存储产品信息
+
+          - inventory: 存储库存数据
+
+          等其他相关表
+
+
+          如果您需要了解特定表的详细结构或其他信息，请告诉我具体的表名。'
+        desc: 无需SQL查询时直接回答用户问题
+        selected: false
+        title: 直接回复
+        type: answer
+        variables: []
+      height: 322
+      id: '1744112762620'
+      position:
+        x: 1550
+        y: 479
+      positionAbsolute:
+        x: 1550
+        y: 479
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "def main(sql_text: str, arg2: str) -> dict:\n    # 简单清理SQL文本，移除markdown格式\n\
+          \    if sql_text:\n        # 移除markdown代码块标记\n        cleaned_sql = sql_text.replace(\"\
+          ```sql\", \"\").replace(\"```\", \"\").strip()\n    else:\n        cleaned_sql\
+          \ = \"\"\n    \n    # 检查SQL是否为空或无效\n    if not cleaned_sql:\n        cleaned_sql\
+          \ = \"SELECT 1\"  # 默认安全查询\n        \n    # 直接返回字符串而非嵌套对象\n    return {\n\
+          \        \"sql_for_query\": cleaned_sql  # 返回纯SQL字符串\n    }\n"
+        code_language: python3
+        desc: 提取SQL生成节点的SQL语句并格式化，准备HTTP请求参数，解决变量传递问题
+        outputs:
+          sql_for_query:
+            children: null
+            type: string
+        selected: false
+        title: SQL查询准备
+        type: code
+        variables:
+        - value_selector:
+          - '1744111524718'
+          - text
+          variable: sql_text
+        - value_selector:
+          - '1744105440621'
+          - result
+          variable: arg2
+      height: 114
+      id: '1744169859162'
+      position:
+        x: 2462
+        y: 285
+      positionAbsolute:
+        x: 2462
+        y: 285
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "def main(sql_query: str) -> dict:\n    import requests\n    import\
+          \ json\n    \n    # 确保SQL查询已清理\n    cleaned_sql = sql_query.strip()\n  \
+          \  \n    try:\n        # 构建请求\n        url = \"http://114.215.186.102:3002/query\"\
+          \n        payload = {\"sql\": cleaned_sql}\n        headers = {\"Content-Type\"\
+          : \"application/json\"}\n        \n        # 发送请求\n        response = requests.post(url,\
+          \ json=payload, headers=headers)\n        \n        # 检查响应状态\n        if\
+          \ response.status_code == 200:\n            # 成功获取数据\n            result\
+          \ = response.json()\n            return {\n                \"success\":\
+          \ 1,  # 使用数字1代替true\n                \"data_json\": json.dumps(result),\
+          \  # 转换为JSON字符串\n                \"status_code\": response.status_code,\n\
+          \                \"error\": \"\"  # 空字符串代替null\n            }\n        else:\n\
+          \            # 请求失败\n            return {\n                \"success\":\
+          \ 0,  # 使用数字0代替false\n                \"data_json\": \"{}\",  # 空JSON字符串\n\
+          \                \"status_code\": response.status_code,\n              \
+          \  \"error\": response.text\n            }\n    except Exception as e:\n\
+          \        # 处理异常情况\n        return {\n            \"success\": 0,\n     \
+          \       \"data_json\": \"{}\",\n            \"status_code\": 500,\n    \
+          \        \"error\": f\"请求执行错误: {str(e)}\"\n        }"
+        code_language: python3
+        desc: 通过Python代码直接执行HTTP请求，将SQL查询发送到数据库API服务并获取结果。它替代了原生HTTP请求节点，解决了变量替换问题，使SQL查询能够被正确执行。
+        outputs:
+          data_json:
+            children: null
+            type: string
+          error:
+            children: null
+            type: string
+          status_code:
+            children: null
+            type: number
+          success:
+            children: null
+            type: number
+        selected: false
+        title: SQL查询执行
+        type: code
+        variables:
+        - value_selector:
+          - '1744169859162'
+          - sql_for_query
+          variable: sql_query
+      height: 146
+      id: '1744179403837'
+      position:
+        x: 2766
+        y: 285
+      positionAbsolute:
+        x: 2766
+        y: 285
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "def main(query_text: str, sql_text: str, result_text: str, query_success:\
+          \ int) -> dict:\n    from datetime import datetime\n    \n    # 获取当前时间\n\
+          \    current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')\n    \n\
+          \    # 构建新的历史记录\n    new_record = f\"\"\"\n时间: {current_time}\n用户问题: {query_text}\n\
+          SQL查询: {sql_text}\n查询状态: {\"成功\" if query_success == 1 else \"失败\"}\n查询结果:\
+          \ {result_text}\n-------------------\n\"\"\"\n\n# 直接返回新的历史记录作为query_history\n\
+          \    return {\n        \"query_history\": new_record  # 这将直接作为新的查询历史\n \
+          \   }"
+        code_language: python3
+        desc: 生成并更新包含时间戳、用户问题和SQL查询结果的历史记录
+        outputs:
+          query_history:
+            children: null
+            type: string
+        selected: false
+        title: 查询历史更新
+        type: code
+        variables:
+        - value_selector:
+          - sys
+          - query
+          variable: query_text
+        - value_selector:
+          - '1744179403837'
+          - data_json
+          variable: sql_text
+        - value_selector:
+          - '1744101488302'
+          - text
+          variable: result_text
+        - value_selector:
+          - '1744179403837'
+          - success
+          variable: query_success
+      height: 98
+      id: '1744184379625'
+      position:
+        x: 3374
+        y: 285
+      positionAbsolute:
+        x: 3374
+        y: 285
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    viewport:
+      x: 37.704761904761995
+      y: 59.860000000000014
+      zoom: 0.3

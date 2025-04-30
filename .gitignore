@@ -47,3 +47,8 @@ ENV/
 
 # Git bundles
 *.bundle 
+
+# Cache directories
+.cache/
+*/.cache/
+**/.cache/ 

@@ -165,8 +165,11 @@ cp .env.example .env
 streamlit run app.py
 ```
 
-### 演示
-![使用演示](https://github.com/mingyu110/AI/blob/main/EV%20Analyzer%20AI%20Agent%2020250414/demo.gif)
+## 系统演示
+
+下面是系统运行的演示：
+
+![EV分析系统演示](https://raw.githubusercontent.com/mingyu110/AI/main/EV%20Analyzer%20AI%20Agent%2020250414/demo.gif)
 
 ### 应用界面说明
 

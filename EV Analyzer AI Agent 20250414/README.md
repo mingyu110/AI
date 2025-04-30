@@ -221,6 +221,12 @@ streamlit run app.py
 - **Python电子邮件库**: 用于发送分析报告
 - **Markdown**: 用于格式化分析报告
 
+### 技术架构图
+
+下图展示了系统的整体技术架构和组件交互关系：
+
+![EV Analyzer AI Agent 技术架构图](https://github.com/mingyu110/AI/raw/main/EV%20Analyzer%20AI%20Agent%2020250414/EV%20Analyzer%20AI%20Agent%20Architecture.png)
+
 ### 信息处理流程
 
 系统的信息处理流程如下：

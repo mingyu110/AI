@@ -44,3 +44,6 @@ ENV/
 
 # Logs
 *.log 
+
+# Git bundles
+*.bundle 

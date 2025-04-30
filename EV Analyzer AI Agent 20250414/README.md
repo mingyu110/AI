@@ -166,7 +166,7 @@ streamlit run app.py
 ```
 
 ### 演示
-![使用演示](../demo.gif)
+![使用演示](./demo.gif)
 
 ### 应用界面说明
 

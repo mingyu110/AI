@@ -166,7 +166,7 @@ streamlit run app.py
 ```
 
 ### 演示
-![使用演示]([https://github.com/mingyu110/AI/raw/main/EV%20Analyzer%20AI%20Agent%2020250414/demo.gif](https://github.com/mingyu110/AI/blob/main/EV%20Analyzer%20AI%20Agent%2020250414/demo.gif))
+![使用演示](https://github.com/mingyu110/AI/blob/main/EV%20Analyzer%20AI%20Agent%2020250414/demo.gif)
 
 ### 应用界面说明
 

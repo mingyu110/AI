@@ -9,16 +9,16 @@ models/onnx_ocr/
 # 生成的输出
 output/
 
-# Mac系统文件
-.DS_Store
-
-# Python缓存
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# C extensions
 *.so
+
+# Distribution / packaging
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -30,6 +30,36 @@ lib64/
 parts/
 sdist/
 var/
+wheels/
 *.egg-info/
 .installed.cfg
-*.egg 
+*.egg
+
+# Virtual environment
+.venv
+.venv_py312
+venv/
+ENV/
+
+# dotenv environment variables file
+.env
+
+# macOS files
+.DS_Store
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log 
+
+# Git bundles
+*.bundle 
+
+# Cache directories
+.cache/
+*/.cache/
+**/.cache/

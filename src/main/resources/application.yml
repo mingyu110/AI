@@ -1,0 +1,23 @@
+spring:
+  ai:
+    tongyi:
+      api-key: ${TONGYI_API_KEY:你的通义千问API密钥}  # 通过环境变量TONGYI_API_KEY或默认值设置
+      model: qwen-max         # 使用的模型名称，例如：qwen-max, qwen-turbo, qwen-plus
+      streaming: true         # 是否使用流式响应
+      options:
+        top-p: 0.8
+        temperature: 0.7
+        max-tokens: 1024
+        result-format: text   # 返回格式：text或message
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}  # 从环境变量获取API密钥
+    qwen:
+      options:
+        model: qwen-max
+        temperature: 0.7
+        max-tokens: 2000
+
+logging:
+  level:
+    org.springframework.ai: INFO
+    com.alibaba.cloud.ai: DEBUG 

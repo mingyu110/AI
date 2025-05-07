@@ -1,7 +1,6 @@
 ## KuberAI - 基于Spring AI Alibaba的Kubernetes资源智能优化系统
 
-KuberAI是一款智能资源调度建议工具，基于应用负载特征自动推荐最优Pod资源配置。该项目使用 [Spring AI](https://github.com/spring-projects/spring-ai)框架，通过阿里云通义千问大模型提供更智能的资源优化建议。
-
+KuberAI是一款智能资源调度建议工具，基于应用负载特征自动推荐最优Pod资源配置。该项目使用[Spring AI Alibaba](https://github.com/alibaba/spring-ai-alibaba) 框架，通过阿里云通义千问大模型提供更智能的资源优化建议。
 ### 1. 功能特性
 
 1. 智能资源调度建议：基于Pod历史负载特征自动推荐最优资源配置

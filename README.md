@@ -89,3 +89,10 @@ KuberAI计划在未来版本中添加以下功能特性：
 - **CI/CD集成**：与常见CI/CD流水线工具集成，在部署前验证资源配置
 - **GitOps支持**：生成资源配置PR，支持通过GitOps工作流实现变更
 - **服务网格集成**：与Istio等服务网格解决方案集成，优化网络资源
+
+## 项目列表
+
+1. [PDF转Markdown工具](./pdf_tools) - 使用模型将PDF文件转换为Markdown格式
+2. [EV Analyzer AI Agent 20250414](./EV%20Analyzer%20AI%20Agent%2020250414) - 基于 CrewAId多智能体开发框架和 DeepSeek 大模型的新能源行业智能分析助手
+3. [AI零代码智能数据分析决策助手.yml](./AI零代码智能数据分析决策助手.yml) - 零代码 BI 分析与决策助手的 Dify 工作流 DSL 文件
+4. [KuberAI](./KuberAI) - 基于Spring AI Alibaba和通义千问大模型的Kubernetes资源智能优化系统

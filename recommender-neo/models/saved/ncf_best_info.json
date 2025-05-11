@@ -1,0 +1,43 @@
+{
+    "epoch": 1,
+    "train_loss": 0.09653894710495617,
+    "metrics": {
+        "rmse": 0.2859077453613281,
+        "mae": 0.2421797215938568,
+        "mean_error": 0.2421797215938568,
+        "max_error": 0.6796792149543762,
+        "correlation": 0.05584796860538972,
+        "valid_samples": 3178.0,
+        "nan_samples": 0.0,
+        "valid_ratio": 1.0,
+        "hr@5": 0.9896800825593395,
+        "ndcg@5": 0.7899361891458943,
+        "hr@10": 1.0,
+        "ndcg@10": 0.7935465665524816
+    },
+    "config": {
+        "data_dir": "./data/raw",
+        "model_dir": "./models/saved",
+        "batch_size": 64,
+        "embedding_dim": 64,
+        "mlp_layers": [
+            128,
+            64,
+            32
+        ],
+        "dropout": 0.2,
+        "lr": 0.001,
+        "epochs": 10,
+        "early_stopping": 3,
+        "device": "cpu"
+    },
+    "dataset_stats": {
+        "num_users": 1000,
+        "num_items": 794,
+        "train_samples": 12637,
+        "test_samples": 3178,
+        "rating_min": 0.0,
+        "rating_max": 1.0,
+        "sparsity": 0.9800818639798489
+    }
+}

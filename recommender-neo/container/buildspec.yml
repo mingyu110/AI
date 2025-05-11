@@ -1,0 +1,34 @@
+phases:
+  build:
+    commands:
+    - echo "Build started on $(date)"
+    - "echo \"\u5F53\u524D\u5DE5\u4F5C\u76EE\u5F55: $(pwd)\""
+    - "echo \"\u8FDB\u5165container\u76EE\u5F55:\""
+    - cd container
+    - "echo \"\u68C0\u67E5Dockerfile:\""
+    - "cat Dockerfile || echo \"Dockerfile\u4E0D\u5B58\u5728\""
+    - "echo \"\u4ECE S3 \u4E0B\u8F7D Neo \u7F16\u8BD1\u4F18\u5316\u7684\u6A21\u578B:\""
+    - mkdir -p model_download
+    - aws s3 cp s3://${NEO_MODEL_S3_URI} model_download/ --recursive
+    - ls -la model_download/
+    - "echo \"\u6784\u5EFADocker\u955C\u50CF:\""
+    - export IMAGE_URI="$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG"
+    - docker build -t "$IMAGE_URI" . --build-arg NEO_MODEL_PATH=model_download || exit 1
+    - "echo \"\u63A8\u9001Docker\u955C\u50CF:\""
+    - docker push "$IMAGE_URI" || exit 1
+  post_build:
+    commands:
+    - echo "Build completed on $(date)"
+    - "echo \"\u6784\u5EFA\u548C\u63A8\u9001\u5B8C\u6210\uFF0C\u955C\u50CFURI: $IMAGE_URI\""
+  pre_build:
+    commands:
+    - echo Logging in to Amazon ECR...
+    - echo "AWS Region=$AWS_DEFAULT_REGION"
+    - echo "AWS Account ID=$AWS_ACCOUNT_ID"
+    - echo "Image Repo=$IMAGE_REPO_NAME"
+    - echo "Neo Model S3 URI=${NEO_MODEL_S3_URI}"
+    - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username
+      AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+    - "echo \"\u5217\u51FA\u5F53\u524D\u76EE\u5F55\u7ED3\u6784:\""
+    - ls -la
+version: '0.2'

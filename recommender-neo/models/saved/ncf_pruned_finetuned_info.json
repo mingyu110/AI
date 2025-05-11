@@ -1,0 +1,74 @@
+{
+    "pruned_model": "./models/saved/ncf_pruned.pth",
+    "fine_tuning_config": {
+        "lr": 1e-05,
+        "epochs": 5,
+        "early_stopping": 2,
+        "model_dir": "./models/saved",
+        "save_best": true
+    },
+    "model_size": 0.9787635803222656,
+    "pruned_metrics": {
+        "rmse": NaN,
+        "mae": NaN,
+        "hr@5": NaN,
+        "ndcg@5": NaN,
+        "hr@10": NaN,
+        "ndcg@10": NaN
+    },
+    "fine_tuned_metrics": {
+        "rmse": NaN,
+        "mae": NaN,
+        "hr@5": NaN,
+        "ndcg@5": NaN,
+        "hr@10": NaN,
+        "ndcg@10": NaN
+    },
+    "performance_diff": {
+        "rmse": NaN,
+        "mae": NaN,
+        "hr@5": NaN,
+        "ndcg@5": NaN,
+        "hr@10": NaN,
+        "ndcg@10": NaN
+    },
+    "training_history": {
+        "train_losses": [
+            NaN,
+            NaN
+        ],
+        "final_val_metrics": {
+            "rmse": NaN,
+            "mae": NaN,
+            "hr@5": NaN,
+            "ndcg@5": NaN,
+            "hr@10": NaN,
+            "ndcg@10": NaN
+        }
+    },
+    "dataset_stats": {
+        "num_users": 1000,
+        "num_items": 794,
+        "train_samples": 12667,
+        "test_samples": 3165,
+        "rating_min": NaN,
+        "rating_max": NaN,
+        "sparsity": 0.9800604534005037
+    },
+    "model_config": {
+        "data_dir": "./data/raw",
+        "model_dir": "./models/saved",
+        "batch_size": 64,
+        "embedding_dim": 64,
+        "mlp_layers": [
+            128,
+            64,
+            32
+        ],
+        "dropout": 0.2,
+        "lr": 0.001,
+        "epochs": 10,
+        "early_stopping": 3,
+        "device": "cpu"
+    }
+}

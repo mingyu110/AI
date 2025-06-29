@@ -1,0 +1,16 @@
+# strands-agents - AWS代理框架，用于构建AI代理
+strands-agents
+# strands-agents-tools - AWS代理工具集，提供与AWS服务交互的工具
+strands-agents-tools
+# mcp - 模型控制协议客户端，用于与MCP服务器通信
+mcp
+# streamlit - Web应用框架，用于创建交互式UI界面
+streamlit
+# boto3 - AWS SDK for Python，用于与AWS服务交互
+boto3
+# diagrams - 用于生成云架构图的Python库
+diagrams
+# wheel - Python打包工具，用于构建wheel包
+wheel
+# setuptools - Python包安装和分发工具
+setuptools

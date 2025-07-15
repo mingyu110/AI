@@ -1,4 +1,3 @@
-
 # AI 开源项目与实践代码库
 
 ---
@@ -17,11 +16,43 @@
 
 *   **功能**: 一个标准的AI Agent项目模板，用于演示如何构建、测试和部署生产级的AI Agent。
 *   **技术栈**: Python, LangChain/LangGraph (示例), FastAPI (可选), Pytest (可选)。
-*   **说明**: 此项目提供了一个模块化、可扩展的工程结构，包含了数据处理、核心Agent逻辑、API服务、测试和CI/CD配置的完整框架，是启动新AI Agent项目的理想模板。
+*   **说明**: 此项目提供了一个模块化、可扩展的工程结构，是启动新AI Agent项目的理想模板。
 
-### 2.2 `(其他项目目录)`
+### 2.2 `cloud-engineer-agent/`
 
-*   *(在此处添加其他项目的介绍...)*
+*   **功能**: 一个利用Strands Agents SDK构建的智能AWS云工程师Agent。
+*   **技术栈**: Python, Strands Agents SDK, AWS CDK。
+*   **说明**: 该Agent旨在协助处理与AWS云环境相关的查询和操作，展示了如何将Agent技术应用于云基础设施管理。
+
+### 2.3 `EV Analyzer AI Agent 20250414/`
+
+*   **功能**: 基于CrewAI多智能体框架和DeepSeek大模型的新能源汽车（EV）行业智能分析助手。
+*   **技术栈**: Python, CrewAI, DeepSeek LLM。
+*   **说明**: 此项目通过模拟一个分析师团队（多个Agent协作），对新能源汽车行业的新闻和数据进行深度分析和报告生成。
+
+### 2.4 `KuberAI/`
+
+*   **功能**: 基于Spring AI Alibaba和通义千问大模型的Kubernetes资源智能优化系统。
+*   **技术栈**: Java, Spring AI, Alibaba Tongyi Qwen LLM, Kubernetes。
+*   **说明**: 该项目探索了如何使用AI大模型来分析Kubernetes集群的资源使用情况，并提供优化建议，以提高资源利用率和降低成本。
+
+### 2.5 `recommender-neo/`
+
+*   **功能**: 基于AWS SageMaker Neo的推荐系统模型优化与部署实践。
+*   **技术栈**: Python, AWS SageMaker Neo, PyTorch/TensorFlow。
+*   **说明**: 此项目展示了如何通过模型剪枝、微调和编译优化（使用SageMaker Neo）来提高推荐系统模型的推理性能和效率。
+
+### 2.6 `pdf_tools/`
+
+*   **功能**: 一个使用大模型将PDF文件批量转换为Markdown格式的实用工具。
+*   **技术栈**: Python, PyMuPDF, OpenAI/Anthropic LLM。
+*   **说明**: 该工具可以解析PDF的文本和布局，并利用大模型的理解能力生成结构良好、可读性强的Markdown文件。
+
+### 2.7 `AI零代码智能数据分析决策助手.yml`
+
+*   **功能**: 一个Dify工作流的DSL（领域特定语言）文件，定义了一个零代码的BI分析与决策助手。
+*   **技术栈**: Dify, LLM。
+*   **说明**: 该文件可以直接导入Dify平台，快速部署一个无需编程即可通过自然语言进行数据分析和获取决策建议的应用。
 
 ---
 

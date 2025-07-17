@@ -90,10 +90,6 @@ Dify-on-Dingtalk 是一个轻量级的桥接服务，可将您的 Dify 应用与
 #### 方式一：使用 Docker (推荐)
 
 ```shell
-# 克隆仓库
-git clone https://github.com/zfanswer/dify-on-dingtalk.git
-cd dify-on-dingtalk/docker
-
 # 创建并编辑配置文件
 cp ../.env.example .env
 cp ../.bots.yaml.example .bots.yaml

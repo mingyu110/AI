@@ -74,6 +74,12 @@
 *   **技术栈**: MLOps, Kubernetes, PyTorch, FSDP, AI Agent, RAG, 大模型优化, 分布式系统。
 *   **说明**: 本文档旨在系统性地梳理从底层基础设施到上层AI应用开发的全链路关键技术问题，是AI工程与架构领域的综合知识库。
 
+### 2.11 `contextual-engineering-guide/`
+
+*   **功能**: 一个关于上下文工程（Contextual Engineering）的深度指南和实践项目，重点演示了如何使用 LangChain 和 LangGraph 来构建和优化高级 AI 代理。
+*   **技术栈**: Python, LangChain, LangGraph。
+*   **说明**: 该项目通过一个详细的 Jupyter Notebook，系统性地介绍了上下文工程的四大核心策略：写入（Write）、选择（Select）、压缩（Compress）和隔离（Isolate）。它提供了丰富的代码示例，展示了如何通过精细化的内存管理、RAG、工具使用和多代理架构，来提升 AI 代理在处理复杂、长程任务时的性能、效率和可靠性，是 AI Agent 开发人员的必读实践指南。
+
 ---
 
 ## 3. 如何贡献

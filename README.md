@@ -85,3 +85,8 @@
 ## 3. 如何贡献
 
 欢迎通过Pull Request的方式为本仓库贡献新的AI项目或改进现有项目。请确保每个新项目都以独立的子目录形式存在，并包含一个清晰的`README.md`文件以说明其用途和用法。
+
+## Mistral AI from Scratch
+
+- **Description**: A PyTorch implementation of the Mistral AI model (including Mixture of Experts), complete with detailed explanations and Chinese comments.
+- **Directory**: [Mistral-AI-from-Scratch](./Mistral-AI-from-Scratch/)\

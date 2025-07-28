@@ -27,6 +27,7 @@
 | [`kubernetes_stability_for_ml_platforms.md`](./kubernetes_stability_for_ml_platforms.md) | 深入探讨如何从平台工程和应用开发两个维度，保障机器学习平台在Kubernetes上的生产级稳定性。 | `Kubernetes`, `MLOps`, `SRE` |
 | [`hybrid_cloud_ml_inference_platform_architecture.md`](./hybrid_cloud_ml_inference_platform_architecture.md) | 一份面向混合云的生产级机器学习推理平台架构演进方案，结合了KServe、Triton和Karmada。 | `KServe`, `Triton`, `Karmada`, `MLOps` |
 | [`AI机器学习平台建设深度经验.md`](./AI机器学习平台建设深度经验.md) | 一份体系化的AI机器学习平台建设深度经验总结，全面覆盖了从宏观架构设计、MLOps自动化流程、高性能推理服务到团队构建的实践方法论。 | `MLOps`, `Kubernetes`, `Platform Engineering` |
+| [`serverless_cold_start_optimization_for_ai_inference.md`](./serverless_cold_start_optimization_for_ai_inference.md) | 一份关于Serverless AI推理平台冷启动优化的深度技术方案，系统性地阐述了从基础设施到应用层的全链路优化策略。 | `Serverless`, `Cold Start`, `Knative`, `Fargate` |
 
 ---
 

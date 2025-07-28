@@ -24,6 +24,7 @@
 | [`AI平台架构技术Q&A.md`](./AI%E5%B9%B3%E5%8F%B0%E6%9E%B6%E6%9E%84%E6%8A%80%E6%9C%AFQ%26A.md) | 面向AI平台/Agent开发工程师的Q&A文档，沉淀核心技术要点与架构思考。 | `MLOps`, `Kubernetes`, `PyTorch`, `RAG` |
 | [`contextual-engineering-guide/`](./contextual-engineering-guide/) | 关于上下文工程的深度指南，演示如何使用LangChain/LangGraph构建和优化高级AI代理。 | `Python`, `LangChain`, `LangGraph` |
 | [`Mistral-AI-from-Scratch/`](./Mistral-AI-from-Scratch/) | 从零开始、使用PyTorch实现的Mistral(7B)和Mixtral(8x7B MoE)模型。 | `Python`, `PyTorch`, `xformers` |
+| [`kubernetes_stability_for_ml_platforms.md`](./kubernetes_stability_for_ml_platforms.md) | 深入探讨如何从平台工程和应用开发两个维度，保障机器学习平台在Kubernetes上的生产级稳定性。 | `Kubernetes`, `MLOps`, `SRE` |
 
 ---
 

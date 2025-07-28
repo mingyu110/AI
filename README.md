@@ -29,6 +29,7 @@
 | [`AI机器学习平台建设深度经验.md`](./AI机器学习平台建设深度经验.md) | 一份体系化的AI机器学习平台建设深度经验总结，全面覆盖了从宏观架构设计、MLOps自动化流程、高性能推理服务到团队构建的实践方法论。 | `MLOps`, `Kubernetes`, `Platform Engineering` |
 | [`serverless_cold_start_optimization_for_ai_inference.md`](./serverless_cold_start_optimization_for_ai_inference.md) | 一份关于Serverless AI推理平台冷启动优化的深度技术方案，系统性地阐述了从基础设施到应用层的全链路优化策略。 | `Serverless`, `Cold Start`, `Knative`, `Fargate` |
 | [`AI模型推理优化技术深度解析.md`](./AI模型推理优化技术深度解析.md) | 深入分析现代AI模型，特别是LLM的先进推理优化技术，从架构模式到引擎实现。 | `LLM`, `Inference`, `TensorRT`, `Triton`, `vLLM` |
+| [大模型推理优化：Prefill-Decode（PD）分离与聚合技术综述](./大模型推理优化：Prefill-Decode（PD）分离与聚合技术综述.md) | 详细阐述了大型语言模型（LLM）推理中的Prefill-Decode（PD）分离与聚合两大核心优化策略，并结合GMI Cloud的工程案例，深入剖析了其在生产环境中的应用与挑战。 | `LLM`, `Inference`, `Prefill-Decode`, `KV Cache` |
 
 ---
 
@@ -42,4 +43,3 @@
 4.  **发起Pull Request**: 将你的分支推送到GitHub，并向本仓库的`main`分支发起一个Pull Request。
 
 请确保你的代码遵循仓库中已有的风格，并为任何新项目或重要功能添加清晰的文档。
-

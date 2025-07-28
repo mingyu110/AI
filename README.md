@@ -25,6 +25,7 @@
 | [`contextual-engineering-guide/`](./contextual-engineering-guide/) | 关于上下文工程的深度指南，演示如何使用LangChain/LangGraph构建和优化高级AI代理。 | `Python`, `LangChain`, `LangGraph` |
 | [`Mistral-AI-from-Scratch/`](./Mistral-AI-from-Scratch/) | 从零开始、使用PyTorch实现的Mistral(7B)和Mixtral(8x7B MoE)模型。 | `Python`, `PyTorch`, `xformers` |
 | [`kubernetes_stability_for_ml_platforms.md`](./kubernetes_stability_for_ml_platforms.md) | 深入探讨如何从平台工程和应用开发两个维度，保障机器学习平台在Kubernetes上的生产级稳定性。 | `Kubernetes`, `MLOps`, `SRE` |
+| [`hybrid_cloud_ml_inference_platform_architecture.md`](./hybrid_cloud_ml_inference_platform_architecture.md) | 一份面向混合云的生产级机器学习推理平台架构演进方案，结合了KServe、Triton和Karmada。 | `KServe`, `Triton`, `Karmada`, `MLOps` |
 
 ---
 

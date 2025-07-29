@@ -30,6 +30,7 @@
 | [`serverless_cold_start_optimization_for_ai_inference.md`](./serverless_cold_start_optimization_for_ai_inference.md) | 一份关于Serverless AI推理平台冷启动优化的深度技术方案，系统性地阐述了从基础设施到应用层的全链路优化策略。 | `Serverless`, `Cold Start`, `Knative`, `Fargate` |
 | [`AI模型推理优化技术深度解析.md`](./AI模型推理优化技术深度解析.md) | 深入分析现代AI模型，特别是LLM的先进推理优化技术，从架构模式到引擎实现。 | `LLM`, `Inference`, `TensorRT`, `Triton`, `vLLM` |
 | [大模型推理优化：Prefill-Decode（PD）分离与聚合技术综述](./大模型推理优化：Prefill-Decode（PD）分离与聚合技术综述.md) | 详细阐述了大型语言模型（LLM）推理中的Prefill-Decode（PD）分离与聚合两大核心优化策略，并结合GMI Cloud的工程案例，深入剖析了其在生产环境中的应用与挑战。 | `LLM`, `Inference`, `Prefill-Decode`, `KV Cache` |
+| [bedrock-agentcore-sdk-python-analysis-zh.md](./bedrock-agentcore-sdk-python-analysis-zh.md) | Amazon Bedrock Agent Core SDK的深度分析。从专业的软件工程角度对该SDK的源代码进行了分析，以便开发者更好地基于该SDK二次开发或者基于SDK开发生产级Agentic AI应用。 | `Python`, `AWS Bedrock`, `Generative AI`, `SDK` |
 
 ---
 

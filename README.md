@@ -32,6 +32,7 @@
 | [大模型推理优化：Prefill-Decode（PD）分离与聚合技术综述](./大模型推理优化：Prefill-Decode（PD）分离与聚合技术综述.md) | 详细阐述了大型语言模型（LLM）推理中的Prefill-Decode（PD）分离与聚合两大核心优化策略，并结合GMI Cloud的工程案例，深入剖析了其在生产环境中的应用与挑战。 | `LLM`, `Inference`, `Prefill-Decode`, `KV Cache` |
 | [bedrock-agentcore-sdk-python-analysis-zh.md](./bedrock-agentcore-sdk-python-analysis-zh.md) | Amazon Bedrock Agent Core SDK的深度分析。从专业的软件工程角度对该SDK的源代码进行了分析，以便开发者更好地基于该SDK二次开发或者基于SDK开发生产级Agentic AI应用。 | `Python`, `AWS Bedrock`, `Generative AI`, `SDK` |
 | [`ml-platform-engineering/`](./ml-platform-engineering/) | 体系化的AI机器学习平台建设深度经验总结，全面覆盖了从宏观架构设计、MLOps自动化流程到高性能推理服务的实践方法论。 | `MLOps`, `Kubernetes`, `Platform Engineering` |
+| [`高级RAG架构与开源实现解析.md`](./高级RAG架构与开源实现解析.md) | 深入解析了高级RAG（检索增强生成）架构，对比了朴素与高级RAG的差异，并提供了基于AWS和主流开源工具的实现方案与架构图。 | `RAG`, `LLM`, `Vector Database`, `Document AI` |
 
 ---
 

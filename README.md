@@ -34,6 +34,7 @@
 | [`ml-platform-engineering/`](./ml-platform-engineering/) | 体系化的AI机器学习平台建设深度经验总结，全面覆盖了从宏观架构设计、MLOps自动化流程到高性能推理服务的实践方法论。 | `MLOps`, `Kubernetes`, `Platform Engineering` |
 | [`高级RAG架构与开源实现解析.md`](./高级RAG架构与开源实现解析.md) | 深入解析了高级RAG（检索增强生成）架构，对比了朴素与高级RAG的差异，并提供了基于AWS和主流开源工具的实现方案与架构图。 | `RAG`, `LLM`, `Vector Database`, `Document AI` |
 | [`LLM大模型推理优化：一套系统化的全栈工程方法.md`](./LLM大模型推理优化：一套系统化的全栈工程方法.md) | 一份源于真实SaaS化AI平台实践的、系统化的LLM推理优化终极指南。采用全栈分层思想，深入剖析了从底层硬件（GPU/InfiniBand）、PaaS平台（K8s/Volcano/KServe）到推理引擎内核（模型架构/压缩/PD分离/vLLM/TGI）的每一个关键环节，并附有详细的团队职责矩阵。 | `LLM`, `Inference Optimization`, `System Architecture`, `Cloud-Native`, `AI Engineering` |
+| [`distributed-mlops-overview/`](./distributed-mlops-overview/) | 一套用于在 Kubernetes (K8s) 上使用 Amazon EKS 探索分布式机器学习 (ML) 工作负载的基础设施和示例代码。 | `Terraform`, `Docker`, `Kubernetes`, `AWS EKS`, `Ray`, `Torchrun`, `MPI`, `Volcano Scheduler` |
 
 ---
 

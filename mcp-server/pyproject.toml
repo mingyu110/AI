@@ -1,0 +1,26 @@
+[project]
+name = "mcp-server-vision"
+version = "0.1.0"
+description = "Vision MCP server."
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.6.0",
+    "networkx>=3.4.2",
+    "numpy>=2.2.5",
+]
+authors = [
+    { name = "Philippe-Emmanuel Douziech", email = "temp@gmail.com" },
+]
+keywords = ["vision", "software intelligence", "software mapping", "mcp", "llm"]
+license = { text = "MIT" }
+
+[project.scripts]
+mcp-server-vision = "mcp_server_vision:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+dev-dependencies = ["pyright>=1.1.389"]

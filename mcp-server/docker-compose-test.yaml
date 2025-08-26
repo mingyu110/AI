@@ -1,0 +1,14 @@
+name: sw-mapping-n-intelligence-4-ai
+services:
+  mcp-server-vision:
+    image: mcp-server-vision:${TAG:-alpha-2}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - VISION_API_BASE=http://host.docker.internal:5189/rest/tenants/default
+      - VISION_CODE=False
+      - VISION_VS=False
+

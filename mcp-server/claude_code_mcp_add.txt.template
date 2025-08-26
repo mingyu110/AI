@@ -1,0 +1,1 @@
+claude mcp add-json sw-intel '{"type":"stdio","command":"docker","args":["run","--rm","-i","-e","API_BASE=http://host.docker.internal:5189/rest/tenants/default","-e","CODE=False","docker.io/research0labs/mcp-server:alpha-1"]}'

@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <body>
+    <label for="message">Prompt:</label><br />
+    <textarea id="message" rows="6" cols="70">
+Multiply 12 and 9 using the multiply tool, then explain the result.
+    </textarea>
+    <br />
+    <button id="go">Stream</button>
+    <pre id="out"></pre>
+
+    <script>
+      document.getElementById("go").onclick = async () => {
+        const userMessage = document.getElementById("message").value.trim();
+        if (!userMessage) {
+          alert("Please enter a message first.");
+          return;
+        }
+
+
+        const payload = {
+          transport: "streamable-http",
+          mode: "chat",
+          model: "anthropic.claude-3-sonnet-20240229-v1:0",
+
+          payload: {
+            anthropic_version: "bedrock-2023-05-31",
+            max_tokens: 256,
+            temperature: 0.1,
+
+            tools: [
+              {
+                name: "multiply",
+                description: "Multiply two numbers",
+                input_schema: {
+                  type: "object",
+                  properties: {
+                    a: { type: "number" },
+                    b: { type: "number" }
+                  },
+                  required: ["a", "b"]
+                }
+              }
+            ],
+
+            messages: [
+              {
+                role: "user",
+                content: [
+                  { type: "text", text: userMessage }
+                ]
+              }
+            ]
+          }
+        };
+
+
+        const res = await fetch("http://localhost:8000/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        const out = document.getElementById("out");
+
+        out.textContent = ""; // clear old output
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          const chunk = decoder.decode(value, { stream: true });
+
+          // Bedrock streaming is NDJSON → split by line
+          chunk
+            .split("\n")
+            .filter(Boolean)
+            .forEach(line => {
+              out.textContent += line + "\n";
+            });
+        }
+      };
+    </script>
+  </body>
+</html>

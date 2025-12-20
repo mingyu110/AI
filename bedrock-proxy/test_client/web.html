@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <body>
+    <label for="message">Prompt:</label><br />
+    <textarea id="message" rows="4" cols="60">Write a long poem about Kubernetes and then start to write a story about DevOps engineers and then wait a bit and explain what is aws</textarea>
+    <br />
+    <button id="go">Stream</button>
+    <pre id="out"></pre>
+
+    <script>
+      document.getElementById("go").onclick = async () => {
+        const userMessage = document.getElementById("message").value.trim();
+        if (!userMessage) {
+          alert("Please enter a message first.");
+          return;
+        }
+
+        const payload = {
+          // mode: "embed",
+          // model: "cohere.embed-multilingual-v3",
+          // text: "Hello world",
+          transport: "streamable-http",
+          model: "anthropic.claude-3-sonnet-20240229-v1:0",
+          payload: {
+            anthropic_version: "bedrock-2023-05-31",
+            messages: [
+              {
+                role: "user",
+                content: [
+                  { type: "text", text: userMessage }
+                ]
+              }
+            ],
+            max_tokens: 512
+          }
+        };
+
+        const res = await fetch("http://localhost:8000/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        const out = document.getElementById("out");
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          const chunk = decoder.decode(value, { stream: true });
+          chunk.split("\n").filter(Boolean).forEach(line => {
+            out.textContent += line + "\n";
+          });
+        }
+      };
+    </script>
+  </body>
+</html>
